@@ -212,29 +212,10 @@ nav > ul {
   gap: 22px;
 }
 
-.right-side > div:first-child {
-  display: flex;
-  gap: 22px;
-  align-self: start;
-}
-
-.right-side > div:first-child > div:first-child:first-child {
-  padding: 37px 65px;
-  font-size: 72px;
-  font-weight: 400;
-  text-align: center;
-  background-color: #f0f0f0;
-  border-radius: 100px;
-}
-
-.right-side > div:nth-child(2) {
-  display: flex;
-  gap: 88px;
-  padding: 30px 50px;
-  background: blue;
-  color: white;
-  border-radius: 100px;
-  align-self: center;
+.right-side > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .right-side > div:nth-child(3) {
@@ -540,93 +521,73 @@ nav > ul {
   font-weight: 700;
 }
 
-.footer-section .footer-links {
+.footer-links {
   display: flex;
   gap: 20px;
 }
 
-.footer-section .footer-links a {
+.footer-links > a {
   color: var(--nav-color);
   text-decoration: none;
   font-size: 16px;
 }
 
-/* Media Queries */
-
-@media screen and (max-width: 1440px) {
-  .developer-content > h3 {
-    font-size: 48px;
-  }
-
-  .developer-content > h2 {
-    font-size: 64px;
-  }
-
-  .developer-content > p {
-    font-size: 18px;
-  }
-
-  .built-logos > div {
-    /* Added for better spacing on smaller screens */
-    gap: 30px;
-    padding: 30px;
-  }
+.footer-links > a:hover {
+  text-decoration: underline;
 }
 
-@media screen and (max-width: 1024px) {
-  .developer-section > div > div {
-    flex-direction: column;
-    text-align: center;
+/* Media Queries */
+
+/* Large screens (1440px and below) */
+@media screen and (max-width: 1440px) {
+  .banner-content-1 > h1 {
+    font-size: 100px;
+    line-height: 120px;
   }
 
-  .developer-content {
-    width: 80%;
-    margin-bottom: 40px;
+  .banner-content-1 > p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .developer-image {
-    width: 80%;
+  .features-section > div > div > h3 {
+    font-size: 80px;
+    line-height: 90px;
   }
 
   .built-section > h2 {
     font-size: 40px;
   }
 
-  .built-logos {
-    gap: 30px;
-    justify-content: center; /* Ensure logos are centered */
-  }
-
   .built-logos > div {
-    width: auto; /* Adjust width for smaller screens */
-    flex-basis: calc(50% - 15px); /* Two logos per row */
-    gap: 10px;
-    padding: 20px;
-  }
-
-  .built-logos > img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
+    gap: 50px;
+    padding: 30px;
   }
 
   .mission-section > p {
     font-size: 20px;
   }
-
-  .mission-section > a {
-    font-size: 16px;
-    margin: 0 10px;
-  }
 }
 
-@media screen and (max-width: 768px) {
-  .developer-content {
-    width: 90%;
+/* Medium screens (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 960px;
   }
 
-  .developer-image {
-    width: 90%;
+  .banner-content-1 > h1 {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .banner-content-1 > p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .features-section > div > div > h3 {
+    font-size: 60px;
+    line-height: 70px;
   }
 
   .built-section > h2 {
@@ -634,27 +595,21 @@ nav > ul {
   }
 
   .built-logos {
-    flex-direction: column; /* Stack logos on smaller screens */
-    align-items: center;
+    gap: 20px;
   }
 
   .built-logos > div {
-    width: auto; /* Full width on mobile */
-    flex-basis: auto;
-    text-align: center;
+    width: 300px;
+    padding: 20px;
   }
 
   .built-logos > img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .mission-section > p {
     font-size: 18px;
-  }
-
-  .explore-section > h2 {
-    font-size: 40px;
   }
 
   .explore-links > a {
@@ -665,309 +620,124 @@ nav > ul {
   .footer-section > div > div {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
-  }
-
-  .footer-section .footer-links {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 1746px) {
-  .partner-logos {
-    background-color: #1f2123;
-    display: flex;
-    gap: 70px;
-    align-items: center;
-    padding: 26px 42px;
-    width: 340px;
-    height: 130px;
-    border-radius: 100px;
-    color: var(--nav-color);
-  }
-
-  .about-section > div > div {
-    display: flex;
-    gap: 180px;
-    align-items: center;
-  }
-  .right-side {
-    width: 595px;
-    height: 524px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .stacks {
-    width: 438px;
-    height: 698px;
-    padding: 30px 20px;
-    background: #f0f0f0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 40px;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .banner-content-1 > h1 {
-    font-size: 100px;
-    line-height: 100px;
-  }
-
-  .banner-content-1 > p {
-    font-size: 22px;
-    line-height: 26px;
-  }
-
-  .banner-btn {
-    font-size: 16px;
-  }
-
-  .banner-content-2 {
-    gap: 30px;
-  }
-
-  .partner-logos {
-    width: 261px;
-    height: 80px;
-    gap: 50px;
-    text-wrap: nowrap;
-  }
-
-  .partner-logos > div {
-    width: 100%;
-  }
-
-  .partner-logos > div > img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .partner-logos > p {
-    font-size: 10px;
-  }
-
-  .about-section > div > div {
-    flex-direction: row;
-    gap: 230px;
-  }
-
-  .left-side > h2 {
-    font-size: 80px;
-  }
-
-  .left-side > p {
-    font-size: 18px;
-  }
-
-  .left-side > a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 14px 24px;
-    background: var(--btn-color);
-    color: white;
-    border-radius: 100px;
-  }
-
-  .right-side {
-    width: 654px;
-  }
-
-  .right-side > div:first-child > div:first-child {
-    padding: 33px 55px;
-    font-size: 64px;
-    text-align: center;
-  }
-
-  .features-section > div > div > h3 {
-    font-size: 80px;
-    line-height: 100px;
-  }
-
-  .stacks {
-    width: 400px;
-    height: 600px;
-    padding: 30px 20px;
-    background: #f0f0f0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 40px;
-  }
-
-  .stacks > div:last-child > h4 {
-    font-size: 58px;
-    line-height: 70px;
-  }
-
-  .stacks > div:last-child > p {
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .stacks > div:last-child > a {
-    font-size: 14px;
-    line-height: 16px;
-  }
-}
-
-@media screen and (max-width: 1164px) {
-  .banner-content-2 {
     gap: 20px;
   }
 
-  .stacks {
-    width: 350px;
-    height: 600px;
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .banner-content-2 {
-    gap: 40px;
+/* Small screens (768px and below) */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
   }
 
-  .partner-logos {
-    width: 210px;
-    height: 80px;
-    gap: 10px;
-    text-wrap: nowrap;
-  }
-
-  .partner-logos > p {
-    font-size: 8px;
-  }
-
-  .about-section > div > div {
-    flex-direction: row;
-    gap: 80px;
-  }
-
-  .left-side > h2 {
+  .banner-content-1 > h1 {
     font-size: 60px;
     line-height: 80px;
   }
 
-  .left-side > p {
+  .banner-content-1 > p {
     font-size: 16px;
-  }
-
-  .left-side > a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background: var(--btn-color);
-    color: white;
-    border-radius: 100px;
-  }
-
-  .right-side {
-    width: 446px;
-    height: 400px;
-  }
-
-  .right-side > div:first-child > div:first-child {
-    padding: 49px 80px;
-    font-size: 50px;
-    text-align: center;
+    line-height: 24px;
   }
 
   .features-section > div > div > h3 {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
-  .stacks {
-    width: 300px;
-    height: 550px;
-    padding: 40px 30px;
-    background: #f0f0f0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+  .built-section > h2 {
+    font-size: 28px;
+  }
+
+  .built-logos > div {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .built-logos > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mission-section > p {
+    font-size: 16px;
+  }
+
+  .explore-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-section > div > div {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
     align-items: center;
-    border-radius: 40px;
-  }
-
-  .stacks > div:last-child > h4 {
-    font-size: 51px;
-    line-height: 55px;
-  }
-
-  .stacks > div:last-child > p {
-    font-size: 18px;
-    line-height: 20px;
   }
 }
 
-@media screen and (max-width: 852px) {
-  nav {
-    display: none;
+/* Extra small screens (480px and below) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 10px;
   }
 
-  .ham-menu {
-    display: block;
+  .banner-content-1 > h1 {
+    font-size: 40px;
+    line-height: 60px;
   }
 
-  header > div > div {
-    position: relative;
-  }
-  nav {
-    position: absolute;
-    top: 90px;
-    left: 0;
-    right: 0;
-    display: none;
-    backdrop-filter: blur(10px);
-    animation: upright 0.5s linear forwards;
+  .banner-content-1 > p {
+    font-size: 14px;
+    line-height: 20px;
   }
 
-  .ham-menu > i {
-    font-size: 2rem;
+  .features-section > div > div > h3 {
+    font-size: 40px;
+    line-height: 50px;
   }
 
-  #menu:checked ~ nav {
-    display: block;
+  .built-section > h2 {
+    font-size: 24px;
   }
 
-  ul {
-    background: transparent !important;
-    margin: 0 auto;
+  .built-logos > div {
+    width: 100%;
+    padding: 10px;
   }
 
-  nav > ul {
-    flex-wrap: wrap;
+  .built-logos > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mission-section > p {
+    font-size: 14px;
+  }
+
+  .explore-links > a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .footer-section > div > div {
     flex-direction: column;
-  }
-  nav > ul > li {
-    flex-basis: 100%;
+    text-align: center;
+    gap: 5px;
   }
 
-  .banner-content-2 {
-    gap: 40px;
+  .footer-links {
     flex-direction: column;
-  }
-  .partner-logos {
-    width: 230px;
-    height: 80px;
-    gap: 30px;
-    text-wrap: nowrap;
-  }
-
-  .about-section > div > div {
-    justify-content: center;
     align-items: center;
-  }
-
-  .stacks-cards {
-    flex-direction: column;
   }
 }
 
